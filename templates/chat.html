@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br/>
+    <br/>
+    <section>
+
+    <div class="container bg-transparent col-md-12" style="width: fit-content; align-self: start">
+    <h2>Chatting With Juliet</h2><br/>
+        <div class="row overflow-y: auto"><br/>
+
+            {% for memory in conversation %}
+
+                <div class="col-md-10 offset-md-1 text-bg-dark">
+                    <div class="card">
+                      <div class="card-body text-start text-bg-dark">
+                          <strong class="text-start">{{ memory.user_input }}</strong><br/><br/>
+                          <p class="card-text text-end"> {{ memory.response }}</p>
+                      </div><br/>
+                    </div><br/>
+                </div>
+
+            {% endfor %}
+
+    </div><br/><br/>
+    </div><br/>
+
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-md-9 offset-md-1">
+
+                <form method=POST action="{% url 'chat' %}">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        <label for="user-input">User:</label>
+                        <input type="text" class="form-control" placeholder="Chat With Juliet" name="query">
+                    </div><br/>
+
+                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="submit" class="btn btn-primary">Clear Session</button>
+                <br/><br/><br/><br/><br/>
+                </form>
+            </div>
+        </div>
+    </div>
+    </section>
+
+{% endblock %}

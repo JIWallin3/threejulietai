@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br/><br/>
+    <!-- WELCOME -->
+    <section class="pt-4 pt-md-11">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-5 order-md-2">
+
+            <!-- Image -->
+            <img class="img-fluid mb-6 mb-md-0" alt="..."
+                 src={% static "/assets/img/illustrations/illustration-1.png" %}>
+
+          </div>
+          <div class="col-12 col-md-7 order-md-1">
+
+            <!-- Heading -->
+            <h1 class="display-4">
+              What is AI<br>
+              <span class="text-primary">And where is it going?</span>
+            </h1>
+
+            <!-- Text -->
+            <p class="lead text-muted mb-0">
+              Artificial Intelligence (AI) refers to the field of computer science that aims to create machines
+                capable of performing tasks that would typically require human intelligence. AI systems can
+                perform various tasks, such as natural language processing (understanding and generating human
+                languages), image recognition, pattern recognition, decision-making, and problem-solving.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- About AI -->
+    <section class="pt-4 pt-md-11">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12">
+
+            <!-- Text -->
+            <p class="lead mb-0">
+              AI algorithms can be broadly classified into two categories: rule-based systems and machine learning.
+                Rule-based systems follow a predetermined set of rules to solve problems or make decisions, while
+                machine learning algorithms learn patterns from data to make predictions or decisions.
+            </p><br/>
+            <p class="lead mb-0">
+              Machine learning is a subset of AI, where algorithms learn from a dataset to recognize patterns and make
+                predictions or decisions without explicit programming. There are different types of machine learning,
+                such as supervised learning (learning from labeled data), unsupervised learning (learning from
+                unlabeled data), and reinforcement learning (learning from trial and error).
+            </p><br/>
+            <p class="lead mb-0">
+              Deep learning is a subfield of machine learning that focuses on artificial neural networks, which are
+                inspired by the structure and functioning of the human brain. These networks consist of layers of
+                interconnected nodes or neurons that process and transform input data. Deep learning has been
+                responsible for many breakthroughs in AI, particularly in tasks like image recognition and natural
+                language processing.
+            </p><br/>
+            <p class="lead mb-0">
+              Large language models, like OpenAI's GPT series, are a type of deep learning model that specialize in
+                natural language processing tasks. These models are trained on vast amounts of text data to learn the
+                statistical patterns of human language. They can generate human-like text, answer questions, summarize
+                content, translate languages, and much more. Large language models are typically based on the
+                Transformer architecture, which uses attention mechanisms to process input data more efficiently.
+                These attention mechanisms allow the model to focus on the most relevant parts of the input when
+                generating an output, improving the overall performance of the model.
+            <p class="lead mb-0"><br/>
+              Deep learning is a subfield of machine learning that focuses on artificial neural networks, which
+              are inspired by the structure and functioning of the human brain. These networks consist of layers
+              of interconnected nodes or neurons that process and transform input data. Deep learning has been
+              responsible for many breakthroughs in AI, particularly in tasks like image recognition and natural
+              language processing.
+            </p><br/>
+            <P class="lead mb-0">
+                As these models continue to grow in size and complexity, they are becoming increasingly capable of
+                understanding context and generating coherent, contextually relevant responses. However, there are
+                still challenges in ensuring that these models behave ethically, avoid bias, and provide reliable
+                information.
+            </p><br/>
+            <p class="lead text-primary mb-0">
+                 In summary, artificial intelligence is a broad field that encompasses various subfields and
+                techniques aimed at creating machines capable of tasks that typically require human intelligence.
+                Large language models are a type of AI that focuses on understanding and generating human language,
+                with potential applications in numerous industries and domains.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- COMING SOON -->
+    <section class="pt-8 pt-md-11 pb-8 pb-md-14">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-8 text-center">
+
+            <!-- Heading -->
+            <h3>
+
+            </h3>
+
+            <!-- Text -->
+            <p class="fs-lg text-muted" mb-0>
+
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- CURVE -->
+    <div class="position-relative">
+      <div class="shape shape-bottom shape-fluid-x text-dark">
+        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor"></path>
+        </svg>
+      </div>
+    </div>
+
+{% endblock %}
