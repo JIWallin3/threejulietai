@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'webapp.apps.WebappConfig',  # this app will serve the web app
     'memory_graph.apps.MemoryGraphConfig',  # this app will host our graphQL api
+    'jotter.apps.JotterConfig',  # this app will host our Jotter social app
     'graphene_django',  # add this to support the graphene_django framework
 ]
 
@@ -133,3 +134,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 GRAPHENE = {
     "SCHEMA": "memory_graph.schema.schema",
 }
+
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'

@@ -1,7 +1,7 @@
+{%  load static %}
 <!doctype html>
 <html lang="en">
-{%  load static %}
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,603 +17,608 @@
     <!-- Theme CSS -->
     <link rel="stylesheet" href={%  static '/assets/css/theme.bundle.css' %} />
 
+
+
+
     <!-- Title -->
     <title>3Juliet A.I.</title>
-  </head>
-  <body>
+</head>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <div class="container">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+  <div class="container">
 
-        <!-- Brand -->
-        <a class="navbar-brand" href={% url 'index' %}>
-          <img class="navbar-brand-img" alt="Logo_bk" src={% static '/assets/img/brand.svg' %}>
-        </a>
+    <!-- Brand -->
+    <a class="navbar-brand" href={% url 'index' %}>
+      <img class="navbar-brand-img" alt="Logo_bk" src={% static '/assets/img/brand.svg' %}>
+    </a>
 
-        <!-- Toggler -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- Collapse -->
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
 
-          <!-- Toggler -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                  aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fe fe-x"></i>
-          </button>
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fe fe-x"></i>
+      </button>
 
-          <!-- Navigation -->
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarLandings" data-bs-toggle="dropdown"
-                 href="#" aria-haspopup="true" aria-expanded="false">
-                Topics
-              </a>
-              <div class="dropdown-menu dropdown-menu-xl p-0"
-                   aria-labelledby="navbarLandings">
-                <div class="row gx-0">
-                  <div class="col-12 col-lg-6">
-                    <div class="dropdown-img-start"
-                         style="background-image: url({% static '/assets/img/photos/photo-3.jpg' %});">
+      <!-- Navigation -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarLandings" data-bs-toggle="dropdown"
+             href="#" aria-haspopup="true" aria-expanded="false">
+            Topics
+          </a>
+          <div class="dropdown-menu dropdown-menu-xl p-0"
+               aria-labelledby="navbarLandings">
+            <div class="row gx-0">
+              <div class="col-12 col-lg-6">
+                <div class="dropdown-img-start"
+                     style="background-image: url({% static '/assets/img/photos/photo-3.jpg' %});">
+
+                  <!-- Heading -->
+                  <h4 class="fw-bold text-white mb-0">
+                    How does a.i. work,
+                  </h4>
+
+                  <!-- Text -->
+                  <p class="fs-sm text-white">
+                    and how can it help us?
+                  </p>
+
+                  <!-- Button -->
+                  <a class="btn btn-sm btn-white shadow-dark fonFt-size-sm" href={% url 'overview' %}>
+                    Learn More
+                  </a>
+
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-6">
+                <div class="dropdown-body">
+                  <div class="row gx-0">
+                    <div class="col-6">
 
                       <!-- Heading -->
-                      <h4 class="fw-bold text-white mb-0">
-                        How does a.i. work,
-                      </h4>
+                      <h6 class="dropdown-header">
+                        Education
+                      </h6>
 
-                      <!-- Text -->
-                      <p class="fs-sm text-white">
-                        and how can it help us?
-                      </p>
+                      <!-- List -->
+                      <a class="dropdown-item" href="#">
+                        Educators
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        Students
+                      </a>
+                      <a class="dropdown-item mb-5" href="#">
+                        Administrators
+                      </a>
 
-                      <!-- Button -->
-                      <a class="btn btn-sm btn-white shadow-dark fonFt-size-sm" href={% url 'overview' %}>
-                        Learn More
+                      <!-- Heading -->
+                      <h6 class="dropdown-header">
+                        Community
+                      </h6>
+
+                      <!-- List -->
+                      <a class="dropdown-item" href="#">
+                        Engagement
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        Development
                       </a>
 
                     </div>
-                  </div>
-
-                  <div class="col-12 col-lg-6">
-                    <div class="dropdown-body">
-                      <div class="row gx-0">
-                        <div class="col-6">
-
-                          <!-- Heading -->
-                          <h6 class="dropdown-header">
-                            Education
-                          </h6>
-
-                          <!-- List -->
-                          <a class="dropdown-item" href="#">
-                            Educators
-                          </a>
-                          <a class="dropdown-item" href="#">
-                            Students
-                          </a>
-                          <a class="dropdown-item mb-5" href="#">
-                            Administrators
-                          </a>
-
-                          <!-- Heading -->
-                          <h6 class="dropdown-header">
-                            Community
-                          </h6>
-
-                          <!-- List -->
-                          <a class="dropdown-item" href="#">
-                            Engagement
-                          </a>
-                          <a class="dropdown-item" href="#">
-                            Development
-                          </a>
-
-                        </div>
-                        <div class="col-6">
-
-                          <!-- Heading -->
-                          <h6 class="dropdown-header">
-                            Creators
-                          </h6>
-
-                          <!-- List -->
-                          <a class="dropdown-item" href="#">
-                            Analytics
-                          </a>
-                          <a class="dropdown-item" href="#">
-                            Integration
-                          </a>
-                          <a class="dropdown-item" href="#">
-                            Customization
-                          </a>
-                        </div>
-                      </div> <!-- / .row -->
-                    </div>
-                  </div>
-
-                </div> <!-- / .row -->
-              </div>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown"
-                 href="#" aria-haspopup="true" aria-expanded="false">
-                  Account
-              </a>
-              <div class="dropdown-menu dropdown-menu-md"
-                   aria-labelledby="navbarDocumentation">
-                <div class="list-group list-group-flush">
-
-                  <a class="list-group-item" href={% url 'account_profile' %}>
-                    <!-- Icon -->
-                    <div class="icon icon-sm text-primary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
-                          <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"></path>
-                      </svg>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="ms-4">
+                    <div class="col-6">
 
                       <!-- Heading -->
-                      <h6 class="fw-bold text-uppercase text-primary mb-0">
-                        Manage Account
+                      <h6 class="dropdown-header">
+                        Creators
                       </h6>
 
-                      <!-- Text -->
-                      <p class="fs-sm text-gray-700 mb-0">
-                        Manage your account
-                      </p>
-
+                      <!-- List -->
+                      <a class="dropdown-item" href="#">
+                        Analytics
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        Integration
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        Customization
+                      </a>
                     </div>
-
-                  </a>
-
-                  <a class="list-group-item" href={% url 'account_security' %}>
-                    <!-- Icon -->
-                    <div class="icon icon-sm text-primary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield" viewBox="0 0 16 16">
-                        <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"></path>
-                      </svg>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="ms-4">
-
-                      <!-- Heading -->
-                      <h6 class="fw-bold text-uppercase text-primary mb-0">
-                        Security
-                      </h6>
-
-                      <!-- Text -->
-                      <p class="fs-sm text-gray-700 mb-0">
-                        Review and adjust your security settings
-                      </p>
-                    </div>
-
-                  </a>
-
-                  <a class="list-group-item" href={% url 'account_notifications' %}>
-                    <!-- Icon -->
-                    <div class="icon icon-sm text-primary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
-                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"></path>
-                      </svg>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="ms-4">
-
-                      <!-- Heading -->
-                      <h6 class="fw-bold text-uppercase text-primary mb-0">
-                        Notifications
-                      </h6>
-
-                      <!-- Text -->
-                      <p class="fs-sm text-gray-700 mb-0">
-                        Review and adjust your notification settings
-                      </p>
-                    </div>
-
-                  </a>
-
-                  <a class="list-group-item" href='#'>
-
-                    <!-- Icon -->
-                    <div class="icon icon-sm text-primary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                           class="bi bi-at" viewBox="0 0 16 16">
-                        <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"></path>
-                      </svg>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="ms-4">
-
-                      <!-- Heading -->
-                      <h6 class="fw-bold text-uppercase text-primary mb-0">
-                        Sign In
-                      </h6>
-
-                      <!-- Text -->
-                      <p class="fs-sm text-gray-700 mb-0">
-                          Sign in to your account
-                      </p>
-                    </div>
-
-                  </a>
-
-                  <a class="list-group-item" href='#'>
-
-                    <!-- Icon -->
-                    <div class="icon icon-sm text-primary">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-closed" viewBox="0 0 16 16">
-                        <path d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2zm1 13h8V2H4v13z"></path>
-                        <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"></path>
-                      </svg>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="ms-4">
-
-                      <!-- Heading -->
-                      <h6 class="fw-bold text-uppercase text-primary mb-0">
-                        Sign Out
-                      </h6>
-
-                      <!-- Text -->
-                      <p class="fs-sm text-gray-700 mb-0">
-                          Sign out of your account
-                      </p>
-                    </div>
-
-                  </a>
-
+                  </div> <!-- / .row -->
                 </div>
               </div>
-            </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown"
-                 href="#" aria-haspopup="true" aria-expanded="false">
-                 Our Projects
-              </a>
-              <div class="dropdown-menu dropdown-menu-md"
-                   aria-labelledby="navbarDocumentation">
-                <div class="list-group list-group-flush">
-                  <a class="list-group-item" href="#">
+            </div> <!-- / .row -->
+          </div>
+        </li>
 
-                    <!-- Icon -->
-                    <div class="icon icon-sm">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="darkorange" class="bi bi-chat-dots" viewBox="0 0 16 16">
-                          <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
-                          <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"></path>
-                      </svg>
-                    </div>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown"
+             href="#" aria-haspopup="true" aria-expanded="false">
+              Account
+          </a>
+          <div class="dropdown-menu dropdown-menu-md"
+               aria-labelledby="navbarDocumentation">
+            <div class="list-group list-group-flush">
 
-                    <!-- Content -->
-                    <div class="ms-4">
+              <a class="list-group-item" href="{% url 'user_profile' pk=request.user.id %}">
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                      <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"></path>
+                  </svg>
+                </div>
 
-                      <!-- Heading -->
-                      <h6 class="fw-bold text-uppercase text-primary mb-0">
-                        Juliet
-                      </h6>
+                <!-- Content -->
+                <div class="ms-4">
 
-                      <!-- Text -->
-                      <p class="fs-sm text-gray-700 mb-0">
-                        Our experimental AGI Architecture
-                      </p>
+                  <!-- Heading -->
+                  <h6 class="fw-bold text-uppercase text-primary mb-0">
+                    Manage Account
+                  </h6>
 
-                    </div>
-
-                  </a>
-
-                  <a class="list-group-item" href="#">
-                    <!-- Icon -->
-                    <div class="icon icon-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="pink" class="bi bi-chat-dots" viewBox="0 0 16 16">
-                            <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
-                            <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"></path>
-                        </svg>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="ms-4">
-                      <!-- Heading -->
-                      <h6 class="fw-bold text-uppercase text-primary mb-0">
-                        Just Kindra!
-                      </h6>
-                      <!-- Text -->
-                      <p class="fs-sm text-gray-700 mb-0">
-                        Painkillers:
-                      </p>
-                      <p class="fs-sm text-muted mb-0">
-                        Putting the PURPOSE over the pain
-                      </p>
-
-                    </div>
-
-                  </a>
+                  <!-- Text -->
+                  <p class="fs-sm text-gray-700 mb-0">
+                    Manage your account
+                  </p>
 
                 </div>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown"
-                 href="#" aria-haspopup="true" aria-expanded="false">
 
               </a>
-              <div class="dropdown-menu dropdown-menu-md"
-                   aria-labelledby="navbarDocumentation">
-                <div class="list-group list-group-flush">
-                  <a class="list-group-item" href="#">
 
-                    <!-- Icon -->
-                    <div class="icon icon-sm">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="darkorange" class="bi bi-chat-dots" viewBox="0 0 16 16">
-                          <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
-                          <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"></path>
-                      </svg>
-                    </div>
+              <a class="list-group-item" href="#">
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield" viewBox="0 0 16 16">
+                    <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"></path>
+                  </svg>
+                </div>
 
-                    <!-- Content -->
-                    <div class="ms-4">
+                <!-- Content -->
+                <div class="ms-4">
 
-                      <!-- Heading -->
-                      <h6 class="fw-bold text-uppercase text-primary mb-0">
-                        Juliet
-                      </h6>
+                  <!-- Heading -->
+                  <h6 class="fw-bold text-uppercase text-primary mb-0">
+                    Security
+                  </h6>
 
-                      <!-- Text -->
-                      <p class="fs-sm text-gray-700 mb-0">
-                        Our experimental AGI Architecture
-                      </p>
+                  <!-- Text -->
+                  <p class="fs-sm text-gray-700 mb-0">
+                    Review and adjust your security settings
+                  </p>
+                </div>
 
-                    </div>
+              </a>
 
-                  </a>
+              <a class="list-group-item" href=#>
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"></path>
+                  </svg>
+                </div>
 
-                  <a class="list-group-item" href="#">
-                    <!-- Icon -->
-                    <div class="icon icon-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="pink" class="bi bi-chat-dots" viewBox="0 0 16 16">
-                            <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
-                            <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"></path>
-                        </svg>
-                    </div>
+                <!-- Content -->
+                <div class="ms-4">
 
-                    <!-- Content -->
-                    <div class="ms-4">
-                      <!-- Heading -->
-                      <h6 class="fw-bold text-uppercase text-primary mb-0">
-                        Just Kindra!
-                      </h6>
-                      <!-- Text -->
-                      <p class="fs-sm text-gray-700 mb-0">
-                        Painkillers:
-                      </p>
-                      <p class="fs-sm text-muted mb-0">
-                        Putting the PURPOSE over the pain
-                      </p>
+                  <!-- Heading -->
+                  <h6 class="fw-bold text-uppercase text-primary mb-0">
+                    Notifications
+                  </h6>
 
-                    </div>
+                  <!-- Text -->
+                  <p class="fs-sm text-gray-700 mb-0">
+                    Review and adjust your notification settings
+                  </p>
+                </div>
 
-                  </a>
+              </a>
+
+              <a class="list-group-item" href='#'>
+
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                       class="bi bi-at" viewBox="0 0 16 16">
+                    <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"></path>
+                  </svg>
+                </div>
+
+                <!-- Content -->
+                <div class="ms-4">
+
+                  <!-- Heading -->
+                  <h6 class="fw-bold text-uppercase text-primary mb-0">
+                    Sign In
+                  </h6>
+
+                  <!-- Text -->
+                  <p class="fs-sm text-gray-700 mb-0">
+                      Sign in to your account
+                  </p>
+                </div>
+
+              </a>
+
+              <a class="list-group-item" href='#'>
+
+                <!-- Icon -->
+                <div class="icon icon-sm text-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-closed" viewBox="0 0 16 16">
+                    <path d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2zm1 13h8V2H4v13z"></path>
+                    <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"></path>
+                  </svg>
+                </div>
+
+                <!-- Content -->
+                <div class="ms-4">
+
+                  <!-- Heading -->
+                  <h6 class="fw-bold text-uppercase text-primary mb-0">
+                    Sign Out
+                  </h6>
+
+                  <!-- Text -->
+                  <p class="fs-sm text-gray-700 mb-0">
+                      Sign out of your account
+                  </p>
+                </div>
+
+              </a>
+
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown"
+             href="#" aria-haspopup="true" aria-expanded="false">
+             Our Projects
+          </a>
+          <div class="dropdown-menu dropdown-menu-md"
+               aria-labelledby="navbarDocumentation">
+            <div class="list-group list-group-flush">
+              <a class="list-group-item" href={% url 'chat' %}>
+
+                <!-- Icon -->
+                <div class="icon icon-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="darkorange" class="bi bi-chat-dots" viewBox="0 0 16 16">
+                      <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+                      <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"></path>
+                  </svg>
+                </div>
+
+                <!-- Content -->
+                <div class="ms-4">
+
+                  <!-- Heading -->
+                  <h6 class="fw-bold text-uppercase text-primary mb-0">
+                    Juliet
+                  </h6>
+
+                  <!-- Text -->
+                  <p class="fs-sm text-gray-700 mb-0">
+                    Our experimental AGI Architecture
+                  </p>
 
                 </div>
-              </div>
-            </li>
-          </ul>
-                {% if user.is_authenticated %}:
-                    <a class="navbar-btn btn btn-sm btn-secondary lift ms-auto" href={% url 'logout' %}>
-                          Logout
-                    </a>
-                {% else %}
-                    <a class="navbar-btn btn btn-sm btn-primary lift ms-auto" href={% url 'logout' %}>
-                          Login
-                    </a>
 
-                {% endif %}
-        </div>
-      </div>
-    </nav>
+              </a>
+
+              <a class="list-group-item" href="#">
+                <!-- Icon -->
+                <div class="icon icon-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="pink" class="bi bi-chat-dots" viewBox="0 0 16 16">
+                        <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
+                        <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"></path>
+                    </svg>
+                </div>
+
+                <!-- Content -->
+                <div class="ms-4">
+                  <!-- Heading -->
+                  <h6 class="fw-bold text-uppercase text-primary mb-0">
+                    Just Kindra!
+                  </h6>
+                  <!-- Text -->
+                  <p class="fs-sm text-gray-700 mb-0">
+                    Painkillers:
+                  </p>
+                  <p class="fs-sm text-muted mb-0">
+                    Putting the PURPOSE over the pain
+                  </p>
+
+                </div>
+
+              </a>
+
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDocumentation" data-bs-toggle="dropdown"
+             href="#" aria-haspopup="true" aria-expanded="false">
+            Jotter!
+          </a>
+          <div class="dropdown-menu dropdown-menu-md"
+               aria-labelledby="navbarDocumentation">
+            <div class="list-group list-group-flush">
+              <a class="list-group-item" href={% url 'jotter' %}>
+
+                <!-- Icon -->
+                <div class="icon icon-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-chat-square-quote" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"></path>
+                    <path d="M7.066 4.76A1.665 1.665 0 0 0 4 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112zm4 0A1.665 1.665 0 0 0 8 5.668a1.667 1.667 0 0 0 2.561 1.406c-.131.389-.375.804-.777 1.22a.417.417 0 1 0 .6.58c1.486-1.54 1.293-3.214.682-4.112z"></path>
+                  </svg>
+                </div>
+
+                <!-- Content -->
+                <div class="ms-4">
+
+                  <!-- Heading -->
+                  <h6 class="fw-bold text-uppercase text-primary mb-0">
+                    Coming Soon...
+                  </h6>
+
+                  <!-- Text -->
+                  <p class="fs-sm text-gray-700 mb-0">
+                    Join the conversation.
+                  </p>
+
+                </div>
+
+              </a>
+
+              <a class="list-group-item" href={% url 'jotter_profiles' %}>
+
+                <!-- Icon -->
+                <div class="icon icon-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" class="bi bi-person-check" viewBox="0 0 16 16">
+                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514ZM11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                    <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"></path>
+                  </svg>
+                </div>
+
+                <!-- Content -->
+                <div class="ms-4">
+
+                  <!-- Heading -->
+                  <h6 class="fw-bold text-uppercase text-primary mb-0">
+                    My Jotter
+                  </h6>
+
+                  <!-- Text -->
+                  <p class="fs-sm text-gray-700 mb-0">
+                    Intelligence for user experience
+                  </p>
+
+                </div>
+
+              </a>
+
+            </div>
+          </div>
+        </li>
+      </ul>
+        {% if user.is_authenticated %}
+            <a class="navbar-btn btn btn-sm btn-secondary lift ms-auto" href={% url 'logout' %}>Logout</a>
+        {% else %}
+            <a class="navbar-btn btn btn-sm btn-secondary lift ms-auto" href={% url 'logout' %}>Login</a>
+        {% endif %}
+
+    </div>
+  </div>
+</nav>
+
+<body>
+<div class="container">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="container-fluid">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
 
     {% block content %}
     {% endblock %}
 
     <!-- SHAPE -->
-    <div class="position-relative">
-      <div class="shape shape-bottom shape-fluid-x text-gray-200">
-        <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 48h2880V0h-720C1442.5 52 720 0 720 0H0v48z" fill="currentColor">
-            </path>
-        </svg>
+
+</div>
+</body>
+
+<!-- FOOTER -->
+<footer class="bg-gray-200 navbar-expand" style="max-height: 20%;"><br/>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 col-lg-3">
+
+        <!-- Brand -->
+        <img alt="..." class="footer-brand img-fluid mb-2" src={% static "/assets/brand/brand.svg" %}>
+
+        <!-- Text -->
+        <p class="text-gray-700 mb-2">
+          Help us discover a.i.'s possibilities.
+        </p>
+
+        <!-- Social -->
+        <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
+
+          <li class="list-inline-item list-social-item me-3">
+            <a href="#" class="text-decoration-none">
+              <img class="list-social-icon" alt="..." src={% static "/assets/img/icons/social/instagram.svg" %}>
+            </a>
+          </li>
+
+          <li class="list-inline-item list-social-item me-3">
+            <a href="#" class="text-decoration-none">
+              <img class="list-social-icon" alt="..." src={% static "/assets/img/icons/social/facebook.svg" %}>
+            </a>
+          </li>
+
+          <li class="list-inline-item list-social-item me-3">
+            <a href="#" class="text-decoration-none">
+              <img class="list-social-icon" alt="..." src={% static "/assets/img/icons/social/twitter.svg" %}>
+            </a>
+          </li>
+
+        </ul>
+
       </div>
-    </div>
+      <div class="col-6 col-md-4 col-lg-2">
 
-    <!-- FOOTER -->
-    <footer class="py-8 py-md-11 bg-gray-200">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-4 col-lg-3">
+        <!-- Heading -->
+        <h6 class="fw-bold text-uppercase text-gray-700">
+          Learn More
+        </h6>
 
-            <!-- Brand -->
-            <img alt="..." class="footer-brand img-fluid mb-2" src={% static "/assets/brand/brand.svg" %}>
+        <!-- List -->
+        <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
 
-            <!-- Text -->
-            <p class="text-gray-700 mb-2">
-              Help us discover a.i.'s possibilities.
-            </p>
+          <li class="mb-3">
+            <a href="#" class="text-reset">
+              AI in Education
+            </a>
+          </li>
 
-            <!-- Social -->
-            <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
+          <li class="mb-3">
+            <a href="#" class="text-reset">
+              AI for Creators
+            </a>
+          </li>
 
-              <li class="list-inline-item list-social-item me-3">
-                <a href="#" class="text-decoration-none">
-                  <img class="list-social-icon" alt="..." src={% static "/assets/img/icons/social/instagram.svg" %}>
-                </a>
-              </li>
+          <li class="mb-3">
+            <a href="#" class="text-reset">
+              AI in Business
+            </a>
+          </li>
 
-              <li class="list-inline-item list-social-item me-3">
-                <a href="#" class="text-decoration-none">
-                  <img class="list-social-icon" alt="..." src={% static "/assets/img/icons/social/facebook.svg" %}>
-                </a>
-              </li>
+          <li class="mb-3">
+            <a href="#" class="text-reset">
+               Community
+            </a>
+          </li>
 
-              <li class="list-inline-item list-social-item me-3">
-                <a href="#" class="text-decoration-none">
-                  <img class="list-social-icon" alt="..." src={% static "/assets/img/icons/social/twitter.svg" %}>
-                </a>
-              </li>
+        </ul>
+      </div>
 
-            </ul>
+      <div class="col-6 col-md-4 col-lg-2">
 
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
+        <!-- Heading -->
+        <h6 class="fw-bold text-uppercase text-gray-700">
+          Engage
+        </h6>
 
-            <!-- Heading -->
-            <h6 class="fw-bold text-uppercase text-gray-700">
-              Learn More
-            </h6>
+        <!-- List -->
+        <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
 
-            <!-- List -->
-            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+          <li class="mb-3">
+            <a href="#" class="text-reset">
+              Juliet
+            </a>
+          </li>
 
-              <li class="mb-3">
-                <a href="#" class="text-reset">
-                  AI for Educators
-                </a>
-              </li>
+          <li class="mb-3">
+            <a href="#" class="text-reset">
+              Kindra
+            </a>
+          </li>
 
-              <li class="mb-3">
-                <a href="#" class="text-reset">
-                  AI for Students
-                </a>
-              </li>
+          <li class="mb-3">
+            <a href="#" class="text-reset">
+              Machine Learning
+            </a>
+          </li>
 
-              <li class="mb-3">
-                <a href="#" class="text-reset">
-                  AI for Creators
-                </a>
-              </li>
+          <li class="mb-3">
+            <a href="#" class="text-reset">
+              3Juliet Blog
+            </a>
+          </li>
+        </ul>
+      </div>
 
-              <li class="mb-3">
-                <a href="#" class="text-reset">
-                  Community Development
-                </a>
-              </li>
+      <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
 
-            </ul>
-          </div>
+        <!-- Heading -->
+        <h6 class="fw-bold text-uppercase text-gray-700">
+          Account
+        </h6>
 
-          <div class="col-6 col-md-4 col-lg-2">
+        <!-- List -->
+        <ul class="list-unstyled text-muted mb-0">
 
-            <!-- Heading -->
-            <h6 class="fw-bold text-uppercase text-gray-700">
-              Engage
-            </h6>
+          <li class="mb-3">
+            <a class="text-reset" href={% url 'login' %}>
+              Sign In
+            </a>
+          </li>
 
-            <!-- List -->
-            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
+          <li class="mb-3">
+            <a class="text-reset" href={% url 'logout' %}>
+              Sign Out
+            </a>
+          </li>
 
-              <li class="mb-3">
-                <a href="#" class="text-reset">
-                  Juliet
-                </a>
-              </li>
+          <li class="mb-3">
+            <a class="text-reset" href={% url 'user_profile' pk=request.user.id %}>
+              Manage Your Profile
+            </a>
+          </li>
 
-              <li class="mb-3">
-                <a href="#" class="text-reset">
-                  Kindra
-                </a>
-              </li>
+        </ul>
+      </div>
 
-              <li class="mb-3">
-                <a href="#" class="text-reset">
-                  Machine Learning
-                </a>
-              </li>
+      <div class="col-6 col-md-4 col-lg-2">
 
-              <li class="mb-3">
-                <a href="#" class="text-reset">
-                  3Juliet Blog
-                </a>
-              </li>
-            </ul>
-          </div>
+        <!-- Heading -->
+        <h6 class="fw-bold text-uppercase text-gray-700">
+          Site Disclosures
+        </h6>
 
-          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+        <!-- List -->
+        <ul class="list-unstyled text-muted mb-0">
+          <li class="mb-3">
+            <a class="text-reset" href={% url 'terms_of_service' %}>
+              Terms of Service
+            </a>
+          </li>
+          <li class="mb-3">
+            <a class="text-reset" href={% url 'privacy_policy' %}>
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div> <!-- / .row -->
+  </div> <!-- / .container -->
+</footer>
 
-            <!-- Heading -->
-            <h6 class="fw-bold text-uppercase text-gray-700">
-              Account
-            </h6>
+<!-- JAVASCRIPT -->
+<!-- Map JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
-            <!-- List -->
-            <ul class="list-unstyled text-muted mb-0">
+<!-- Vendor JS -->
+<script src={% static "/assets/js/vendor.bundle.js" %}></script>
 
-              <li class="mb-3">
-                <a class="text-reset" href={% url 'login' %}>
-                  Sign In
-                </a>
-              </li>
+<!-- Theme JS -->
+<script src={% static "/assets/js/theme.bundle.js" %}></script>
 
-              <li class="mb-3">
-                <a class="text-reset" href={% url 'logout' %}>
-                  Sign Out
-                </a>
-              </li>
-
-              <li class="mb-3">
-                <a class="text-reset" href={% url 'account_profile' %}>
-                  Manage Your Profile
-                </a>
-              </li>
-
-            </ul>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-2">
-
-            <!-- Heading -->
-            <h6 class="fw-bold text-uppercase text-gray-700">
-              Site Disclosures
-            </h6>
-
-            <!-- List -->
-            <ul class="list-unstyled text-muted mb-0">
-              <li class="mb-3">
-                <a class="text-reset" href={% url 'terms_of_service' %}>
-                  Terms of Service
-                </a>
-              </li>
-              <li class="mb-3">
-                <a class="text-reset" href={% url 'privacy_policy' %}>
-                  Privacy Policy
-                </a>
-              </li>
-            </ul>
-          </div>
-
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </footer>
-
-    <!-- JAVASCRIPT -->
-    <!-- Map JS -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-
-    <!-- Vendor JS -->
-    <script src={% static "/assets/js/vendor.bundle.js" %}></script>
-
-    <!-- Theme JS -->
-    <script src={% static "/assets/js/theme.bundle.js" %}></script>
-
-  </body>
 </html>

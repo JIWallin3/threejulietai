@@ -2,43 +2,6 @@
 {% load static %}
 {% block content %}
 
-    <!-- BREADCRUMB -->
-    <nav class="bg-dark d-md-none">
-      <div class="container-md">
-        <div class="row align-items-center">
-          <div class="col">
-
-            <!-- Breadcrumb -->
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item">
-                <span class="text-white">
-                  Account
-                </span>
-              </li>
-              <li class="breadcrumb-item active" aria-current="page">
-                <span class="text-white">
-                  Profile
-                </span>
-              </li>
-            </ol>
-
-          </div>
-          <div class="col-auto">
-
-            <!-- Toggler -->
-            <div class="navbar-dark">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#sidenavCollapse" aria-controls="sidenavCollapse"
-                      aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </nav>
-
     <!-- HEADER -->
     <header class="bg-dark pt-9 pb-11 d-none d-md-block">
       <div class="container-md">
@@ -47,12 +10,12 @@
 
             <!-- Heading -->
             <h1 class="fw-bold text-white mb-2">
-              Profile Manager
+              Profile Manager: {{ user.id }} {{ profile.user.first_name }} {{ profile.user.last_name }}
             </h1>
 
             <!-- Text -->
             <p class="fs-lg text-white-75 mb-0">
-              Settings for <a class="text-reset" href="#">useremailhere</a>
+              Settings for <a class="text-reset" href="#">{{ user.email }}</a>
             </p>
 
           </div>
@@ -84,17 +47,17 @@
                   <!-- List -->
                   <ul class="card-list list text-gray-700 mb-6">
                     <li class="list-item active">
-                      <a class="list-link text-reset" href={% url 'account_profile' %}>
+                      <a class="list-link text-reset" href={% url 'user_profile' request.user.id %}>
                         Profile
                       </a>
                     </li>
                     <li class="list-item">
-                      <a class="list-link text-reset" href={% url 'account_security' %}>
+                      <a class="list-link text-reset" href=#>
                         Security
                       </a>
                     </li>
                     <li class="list-item">
-                      <a class="list-link text-reset" href={% url 'account_notifications' %}>
+                      <a class="list-link text-reset" href=#>
                         Notifications
                       </a>
                     </li>
@@ -147,7 +110,7 @@
                       <!-- Name -->
                       <div class="form-group">
                         <label class="form-label" for="name">Name</label>
-                        <input class="form-control" id="name" type="text" placeholder="Full name">
+                        <input class="form-control" id="name" type="text" value="{{ profile.user.first_name }} {{ profile.user.last_name }}">
                       </div>
 
                     </div>
@@ -164,8 +127,8 @@
 
                       <!-- Bio -->
                       <div class="form-group">
-                        <label class="form-label">Bio</label>
-                        <div data-quill='{"placeholder": "Quill WYSIWYG"}'></div>
+                        <label for="bio" class="form-label">Bio</label>
+                          <textarea class="form-control" id="bio" type="text" placeholder="Write something about yourself..">{{ profile.bio }}</textarea>
                       </div>
 
                     </div>

@@ -4,12 +4,16 @@ from tenacity import retry, stop_after_attempt, wait_random_exponential
 from time import sleep
 from textblob import TextBlob
 from django.contrib.auth import authenticate, login
-from django.contrib import messages as msgs
+from django.contrib import messages
+from .models import UserProfile
+from django.conf import settings
+from django.shortcuts import redirect
+from django.contrib.auth.decorators import login_required
 
 
 # Chat GPT Completion - takes only messages param as structured prompt
 @retry(wait=wait_random_exponential(multiplier=1, max=60), stop=stop_after_attempt(8))
-def chatgpt_completion(messages, model="gpt-3.5-turbo"):
+def chatgpt_completion(user_input, model="gpt-3.5-turbo"):
     # TODO: Prompt builder function - house in prompt_funcs.py
     prompt = [
         {
@@ -62,10 +66,10 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            msgs.success(request, f'Hi, {username}! You are now logged in.')
+            messages.success(request, f'Hi, {username}! You are now logged in.')
             return redirect('index.html')
         else:
-            msgs.success(request, "There was an error logging you in. Please try again.")
+            messages.success(request, "There was an error logging you in. Please try again.")
 
     return render(request, 'login.html', {})
 
@@ -82,56 +86,69 @@ def analyze_sentiment(corpus):
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
-
-
-def account_profile(request):
-    return render(request, 'account-profile.html')
+    return render(request, 'index.html', {})
 
 
 def base(request):
-    return render(request, 'base.html')
+    return render(request, 'base.html', {})
 
 
 def chat(request):
-    return render(request, 'chat.html')
+    return render(request, 'chat.html', {})
 
 
 def overview(request):
-    return render(request, 'overview.html')
+    return render(request, 'overview.html', {})
 
 
 def blog_main(request):
-    return render(request, 'blog.html')
+    return render(request, 'blog.html', {})
 
 
 def education_main(request):
-    return render(request, 'education.html')
+    return render(request, 'education.html', {})
 
 
 def creators_main(request):
-    return render(request, 'creators.html')
+    return render(request, 'creators.html', {})
 
 
 def signup(request):
-    return render(request, 'signup.html')
+    return render(request, 'signup.html', {})
 
 
 def site_terms(request):
-    return render(request, 'terms-of-service.html')
+    return render(request, 'terms-of-service.html', {})
 
 
 def privacy_policy(request):
-    return render(request, 'privacy-policy.html')
+    return render(request, 'privacy-policy.html', {})
 
 
-def account_security(request):
-    return render(request, 'account-security.html')
+def profile_security(request):
+    return render(request, 'profile_security.html', {})
 
 
-def account_notifications(request):
-    return render(request, 'account-notifications.html')
+def profile_notifications(request):
+    return render(request, 'profile_notifications.html', {})
 
 
 def open_ai_chat(request):
-    return render(request, 'gpt-4_chat-bot.html')
+    return render(request, 'gpt-4_chat-bot.html', {})
+
+
+def jotter(request):
+    return render(request, 'jotter_index.html', {})
+
+
+@login_required(redirect_field_name=settings.LOGIN_URL)
+def profile_list(request):
+    profiles = UserProfile.objects.all()
+    return render(request, "jotter_profiles.html", {"profiles": profiles})
+
+
+@login_required(redirect_field_name=settings.LOGIN_URL)
+def user_profile(request, pk):
+    profile = UserProfile.objects.get(user_id=pk)
+    return render(request, "user-profile.html", {"profile": profile})
+
