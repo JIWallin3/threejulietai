@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure--$$&^8h2)=n^m%7pu-m@$hp7e9f)ugbq330x&_#um0v98p+&w-'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -71,11 +71,12 @@ WSGI_APPLICATION = "threejulietai.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": 'django.db.backends.postgresql_psycopg2',
-        "NAME": 'threejuliet',
-        "USER": 'postgres',
-        "PASSWORD": 'john5646',
-        "HOST": 'localhost',
-        "PORT": '',
+        "NAME": os.environ.get('PGDATABASE'),
+        "USER": os.environ.get('PGUSER'),
+        "PASSWORD": os.environ.get('PGPASSWORD'),
+        "HOST": os.environ.get('PGHOST'),
+        "PORT": os.environ.get('PGPORT'),
+        "URL": os.environ.get('DATABASE_URL'),
     }
 }
 
@@ -137,3 +138,6 @@ GRAPHENE = {
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
+
+
+DATABASE_URL = 'postgresql://postgres:xYfRU6aa7Tlxfh1Nc1Og@containers-us-west-179.railway.app:5648/railway'
