@@ -119,12 +119,12 @@ USE_TZ = True
 STATIC_URL = "/static/"
 # Set the STATIC_ROOT setting to a valid filesystem path where Django can collect static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 
 STATICFILES_DIRS = [
-os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 # Default primary key field type
