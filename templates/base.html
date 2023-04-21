@@ -154,7 +154,7 @@
                aria-labelledby="navbarDocumentation">
             <div class="list-group list-group-flush">
 
-              <a class="list-group-item" href="{% url 'user_profile' pk=request.user.id %}">
+              <a class="list-group-item" href="{% url 'user_profile' %}">
                 <!-- Icon -->
                 <div class="icon icon-sm text-primary">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
@@ -581,7 +581,7 @@
           </li>
 
           <li class="mb-3">
-            <a class="text-reset" href={% url 'user_profile' pk=request.user.id %}>
+            <a class="text-reset" href={% url 'user_profile' %}>
               Manage Your Profile
             </a>
           </li>
