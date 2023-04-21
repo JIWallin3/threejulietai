@@ -1,6 +1,8 @@
 from django.db import models
 from uuid import uuid4
 
+import webapp.models
+
 
 class Person(models.Model):
     class Gender(models.TextChoices):
@@ -8,6 +10,7 @@ class Person(models.Model):
         FEMALE = 3, 'Female'
 
     uuid = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    profile_id = models.OneToOneField(webapp.models.UserProfile, on_delete=models.CASCADE, blank=True)
     namespace = models.CharField(max_length=256, blank=True)
     name = models.CharField(max_length=256, blank=True)
     gender = models.PositiveSmallIntegerField(choices=Gender.choices, blank=True)

@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY = 'django-insecure--$$&^8h2)=n^m%7pu-m@$hp7e9f)ugbq330x&_#um0v98p+&w-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -71,10 +71,10 @@ WSGI_APPLICATION = "threejulietai.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": 'django.db.backends.postgresql_psycopg2',
-        "NAME": os.environ.get('DB_NAME'),
-        "USER": os.environ.get('DB_USER'),
-        "PASSWORD": os.environ.get('DB_PASSWORD'),
-        "HOST": os.environ.get('DB_HOST'),
+        "NAME": 'threejuliet',
+        "USER": 'postgres',
+        "PASSWORD": 'john5646',
+        "HOST": 'localhost',
         "PORT": '',
     }
 }
@@ -132,7 +132,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Graphene schema will be hosted as var schema in schema.py of memory_graph app
 GRAPHENE = {
-    "SCHEMA": "memory_graph.schema.schema",
+    "SCHEMA": "apps.memory_graph.schema.schema",
 }
 
 LOGIN_URL = '/login/'

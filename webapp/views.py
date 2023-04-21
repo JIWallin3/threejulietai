@@ -141,6 +141,10 @@ def jotter(request):
     return render(request, 'jotter_index.html', {})
 
 
+def what_we_do(request):
+    return render(request, 'what-we-do.html', {})
+
+
 @login_required(redirect_field_name=settings.LOGIN_URL)
 def profile_list(request):
     profiles = UserProfile.objects.all()

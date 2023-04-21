@@ -28,6 +28,8 @@ admin.site.unregister(User)
 # Re-register user model with new UserAdmin
 admin.site.register(User, UserAdmin)
 # admin.site.register(UserProfile)
+
+# Register Memory Graph models - Make sure to import models individually above to minimize error. Keep it clean.
 admin.site.register(Person)
 admin.site.register(Place)
 admin.site.register(RelationshipPersonPerson)

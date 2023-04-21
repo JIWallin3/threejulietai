@@ -17,7 +17,9 @@ urlpatterns = [
     path("terms-of-service/", views.site_terms, name="terms_of_service"),
     path("privacy-policy/", views.privacy_policy, name="privacy_policy"),
     path("open-ai-chat/", views.open_ai_chat, name="open_ai_chat"),
+    path("what-we-do/", views.what_we_do, name="what_we_do"),
 
     path("jotter/", views.jotter, name="jotter"),
     path("jotter_profiles/", views.profile_list, name="jotter_profiles"),
+
 ]
